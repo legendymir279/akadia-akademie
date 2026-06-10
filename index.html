@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="CDVDXyeKnGYkndB7rPvzeIVPRTNhGwcyt9Wn2ecQPd4" />
+    <!-- SEO Meta Tags -->
+    <title>Digitale Bibliothek & Ressourcen für Gründung & Karriere | Akadia Akademie</title>
+    <meta name="description" content="Die digitale Bibliothek der Akadia Akademie. Exklusive E-Books, Vorlagen und Webinare für Existenzgründer und Karrierecoaching. Jetzt Ressourcen entdecken!">
+    <meta name="keywords" content="Akadia Akademie, Digitale Bibliothek, Existenzgründung, Karrierecoaching, Bildung, E-Books, Ressourcen, Businessplan Vorlage, Deutschland">
+    <link rel="canonical" href="https://library.akadia-akademie.de/">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://library.akadia-akademie.de/">
+    <meta property="og:title" content="Digitale Bibliothek & Ressourcen | Akadia Akademie">
+    <meta property="og:description" content="Entdecken Sie exklusive Ressourcen, E-Books und Vorlagen für Existenzgründung und Karrierecoaching.">
+    <meta property="og:image" content="https://library.akadia-akademie.de/og-image.jpg">
+
+    <!-- Schema.org JSON-LD (Sangat Penting untuk SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Library",
+      "name": "Akadia Akademie - Digitale Bibliothek",
+      "url": "https://library.akadia-akademie.de/",
+      "logo": "https://akadia-akademie.de/logo.png",
+      "description": "Die digitale Bibliothek der Akadia Akademie bietet exklusive Ressourcen für Existenzgründer und Karrierecoaching.",
+      "parentOrganization": {
+        "@type": "EducationalOrganization",
+        "name": "Akadia Akademie GmbH",
+        "url": "https://akadia-akademie.de/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Badepark 3",
+          "addressLocality": "Schönebeck",
+          "postalCode": "39218",
+          "addressCountry": "DE"
+        }
+      }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #1A365D; /* Deep Navy Blue (Trust/Education) */
+            --secondary: #D69E2E; /* Premium Gold (Success/Quality) */
+            --bg: #F7FAFC;
+            --text: #2D3748;
+            --card-bg: #FFFFFF;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        header {
+            background: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--secondary); }
+        nav ul { display: flex; list-style: none; gap: 2rem; }
+        nav a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: var(--primary); }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #2B6CB0 100%);
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            animation: pulse 10s infinite;
+        }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+        
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; position: relative; z-index: 1; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem; position: relative; z-index: 1; }
+        
+        .search-box {
+            display: flex;
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 50px;
+            padding: 5px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 1;
+        }
+        .search-box input {
+            flex: 1;
+            border: none;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            outline: none;
+            border-radius: 50px;
+            color: var(--text);
+        }
+        .search-box button {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .search-box button:hover { background: #B7791F; }
+
+        /* Sections */
+        section { padding: 5rem 0; }
+        .section-title { text-align: center; font-size: 2rem; color: var(--primary); margin-bottom: 1rem; }
+        .section-subtitle { text-align: center; color: #718096; margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+
+        /* Grid & Cards */
+        .grid { display: grid; gap: 2rem; }
+        .grid-4 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #E2E8F0;
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .card h3 { color: var(--primary); margin-bottom: 0.5rem; font-size: 1.25rem; }
+        .card p { color: #718096; font-size: 0.95rem; }
+        .card .icon { color: var(--secondary); margin-bottom: 1rem; }
+
+        /* Resource Cards */
+        .resource-card { display: flex; flex-direction: column; }
+        .resource-tag {
+            display: inline-block;
+            background: #EBF8FF;
+            color: #2B6CB0;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            width: fit-content;
+        }
+        .resource-link {
+            margin-top: auto;
+            padding-top: 1rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: gap 0.3s;
+        }
+        .resource-link:hover { gap: 10px; color: var(--secondary); }
+
+        /* Access Section */
+        .access-section { background: #EDF2F7; }
+        .text-center { text-align: center; }
+        .icon-circle {
+            width: 50px; height: 50px;
+            background: var(--primary); color: white;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        /* Footer */
+        footer { background: var(--primary); color: white; padding: 4rem 0 2rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        footer h3, footer h4 { margin-bottom: 1rem; color: var(--secondary); }
+        footer ul { list-style: none; }
+        footer li { margin-bottom: 0.5rem; }
+        footer a { color: #CBD5E0; text-decoration: none; transition: color 0.3s; }
+        footer a:hover { color: white; }
+        .copyright { border-top: 1px solid #4A5568; padding-top: 2rem; text-align: center; color: #A0AEC0; font-size: 0.9rem; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            nav ul { display: none; } /* Simplified for mobile, can add hamburger menu later */
+            .search-box { flex-direction: column; border-radius: 15px; }
+            .search-box input { text-align: center; }
+            .search-box button { padding: 1rem; border-radius: 10px; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="https://akadia-akademie.de" class="logo">Akadia <span>Bibliothek</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#kategorien">Kategorien</a></li>
+                    <li><a href="#ressourcen">Ressourcen</a></li>
+                    <li><a href="#zugang">Zugang</a></li>
+                    <li><a href="https://akadia-akademie.de/kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Ihr Wissensvorsprung für Karriere & Gründung</h1>
+                <p>Exklusive E-Books, Vorlagen und Webinare der Akadia Akademie für Ihren beruflichen Erfolg.</p>
+                
+                <div class="search-box">
+                    <input type="text" placeholder="Wonach möchten Sie suchen? (z.B. Businessplan, Bewerbung)">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        Suchen
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="kategorien">
+            <div class="container">
+                <h2 class="section-title">Unsere Ressourcen-Kategorien</h2>
+                <p class="section-subtitle">Strukturiertes Wissen für jede Phase Ihrer beruflichen und unternehmerischen Laufbahn.</p>
+                
+                <div class="grid grid-4">
+                    <div class="card">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        </div>
+                        <h3>Existenzgründung</h3>
+                        <p>Businesspläne, Rechtsformen, Fördermittel und Strategien für den erfolgreichen Start in die Selbstständigkeit.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                        </div>
+                        <h3>Karriere & Bewerbung</h3>
+                        <p>Lebenslauf-Vorlagen, Anschreiben, Interview-Leitfäden und Strategien für die nächste Beförderung.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <h3>Business & Management</h3>
+                        <p>Führungskompetenz, Marketing, Vertrieb und Finanzplanung für nachhaltiges Unternehmenswachstum.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"></path></svg>
+                        </div>
+                        <h3>Soft Skills</h3>
+                        <p>Kommunikation, Zeitmanagement, Resilienz und Persönlichkeitsentwicklung für den Alltag.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Resources -->
+        <section id="ressourcen" style="background: white;">
+            <div class="container">
+                <h2 class="section-title">Beliebte Downloads & Medien</h2>
+                <p class="section-subtitle">Die meistgenutzten Ressourcen unserer Coaching-Teilnehmer.</p>
+                
+                <div class="grid grid-3">
+                    <article class="card resource-card">
+                        <span class="resource-tag">E-Book (PDF)</span>
+                        <h3>Der ultimative Businessplan-Guide 2026</h3>
+                        <p>Schritt-für-Schritt-Anleitung zur Erstellung eines überzeugenden Businessplans für Förderbanken und Investoren.</p>
+                        <a href="#" class="resource-link">Jetzt herunterladen <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></a>
+                    </article>
+                    <article class="card resource-card">
+                        <span class="resource-tag">Vorlage (DOCX)</span>
+                        <h3>Perfekte Bewerbungsunterlagen</h3>
+                        <p>Modernes Lebenslauf-Template und Anschreiben-Vorlagen, die bei Personalern Eindruck hinterlassen.</p>
+                        <a href="#" class="resource-link">Jetzt herunterladen <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></a>
+                    </article>
+                    <article class="card resource-card">
+                        <span class="resource-tag">Webinar (Video)</span>
+                        <h3>Erfolgreich ins erste Geschäftsjahr</h3>
+                        <p>Aufzeichnung unseres exklusiven Webinars zu Steuern, Buchhaltung und Akquise für Neugründer.</p>
+                        <a href="#" class="resource-link">Video ansehen <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Access -->
+        <section id="zugang" class="access-section">
+            <div class="container">
+                <h2 class="section-title">Zugang zur Bibliothek</h2>
+                <p class="section-subtitle">Als Kunde der Akadia Akademie erhalten Sie exklusiven Zugang zu unserem gesamten digitalen Archiv.</p>
+                <div class="grid grid-3">
+                    <div class="card text-center">
+                        <div class="icon-circle">1</div>
+                        <h3>Registrieren & Anmelden</h3>
+                        <p>Nutzen Sie Ihre bestehenden Kundendaten oder registrieren Sie sich für ein Coaching.</p>
+                    </div>
+                    <div class="card text-center">
+                        <div class="icon-circle">2</div>
+                        <h3>Ressourcen Entdecken</h3>
+                        <p>Durchsuchen Sie unsere Bibliothek nach E-Books, Vorlagen und Webinaren.</p>
+                    </div>
+                    <div class="card text-center">
+                        <div class="icon-circle">3</div>
+                        <h3>Download & Lernen</h3>
+                        <p>Laden Sie Materialien herunter und wenden Sie Ihr neues Wissen sofort an.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>Akadia Bibliothek</h3>
+                    <p>Die digitale Wissensdatenbank der Akadia Akademie GmbH für Ihre berufliche und unternehmerische Entwicklung.</p>
+                </div>
+                <div>
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="https://akadia-akademie.de/impressum.html">Impressum</a></li>
+                        <li><a href="https://akadia-akademie.de/datenschutz.html">Datenschutz</a></li>
+                        <li><a href="https://akadia-akademie.de/agb.html">AGB</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li>Akadia Akademie GmbH</li>
+                        <li>Badepark 3</li>
+                        <li>39218 Schönebeck (Elbe)</li>
+                        <li><a href="mailto:kontakt@akadia-akademie.de">kontakt@akadia-akademie.de</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Akadia Akademie GmbH. Alle Rechte vorbehalten.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
